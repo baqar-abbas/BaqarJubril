@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technical Documentation Page</title>
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -46,7 +47,7 @@ body {
 </style>
 </head>
 <body>
-
+<main id="main-doc">
 <div class="sidenav">
     <h1>JS Documentation</h1>
  <hr> <a href="#intro">Introduction</a><hr>
@@ -69,6 +70,7 @@ body {
 </div>
 
 <div class="main">
+  <section class="main-section" id="Introduction">
   <h2 id="intro">Introduction</h2>
   <p > JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host
      environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control
@@ -86,6 +88,8 @@ body {
              to another of the application, or perform file manipulations on a server. </li>
     </ul>
     </p>
+  </section>
+  <section class="main-section" id="What_you_should_already_know">
     <h2 id="what">What you should already know</h2>
   <p>This guide assumes you have the following basic background:
     <ul>
@@ -94,7 +98,8 @@ body {
         <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript</li>
     </ul>
   </p>
-
+</section>
+<section class="main-section" id="Javascript_and_Java">
   <h2 id="java">JavaScript and Java</h2>
   <p>
 
@@ -104,15 +109,19 @@ body {
     
     JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.
     </p>
-  
+  </section>
+
+  <section class="main-section" id="Hello_world">
     <h2 id="hello">Hello world</h2>
   
-  <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
-    <blockquote>function greetMe(yourName) { alert("Hello " + yourName); }<br>
+  <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:<br>
+   <br> <code>function greetMe(yourName) { alert("Hello " + yourName); }<br>
                 greetMe("World");
-    </blockquote>  
+              </code> <br><br>
     Select the code in the pad and hit Ctrl+R to watch it unfold in your browser! </p>
+  </section>
 
+  <section class="main-section" id="Variables">
     <h2 id="variable">Variables</h2>
 
   <p>  You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
@@ -122,7 +131,9 @@ body {
     through "Z" (uppercase) and the characters "a" through "z" (lowercase).
     You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters 
     in identifiers. Some examples of legal names are Number_hits, temp99, and _name. </p>
+  </section>
 
+  <section class="main-section" id="Declaring_variables">
     <h2 id="declare">Declaring variables</h2>
   <p> You can declare a variable in three ways:
 
@@ -137,7 +148,9 @@ body {
     With the keyword let. For example,
     <blockquote style="background-color: rgb(184, 175, 175);">let y = 13</blockquote> .
     This syntax can be used to declare a block scope local variable. See Variable scope below. </p>
+  </section>
 
+  <section class="main-section" id="Variable_scope">
     <h2 id="scope">Variable scope</h2>
     
 <p>
@@ -147,12 +160,15 @@ document. When you declare a variable within a function, it is called a local va
 JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function 
 (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global 
 context) within which x is declared, not the block, which in this case is an if statement.<br>
-if (true) { var x = 5; } console.log(x); // 5
+<code>if (true) { var x = 5; } console.log(x); // 5</code><br>
 
 This behavior changes, when using the let declaration introduced in ECMAScript 2015.<br>
-if (true) { let y = 5; } console.log(y); // ReferenceError: y is
-            not defined</p>
+<code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is
+            not defined </code><br>
+          </p>
+          </section>
 
+          <section ="main-section" id="Global_variables">
             <h2 id="global">Global variables</h2>
   <p>
 
@@ -162,24 +178,27 @@ if (true) { let y = 5; } console.log(y); // ReferenceError: y is
      name. For example, if a variable called phoneNumber
      is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.
     </p>
-
+  </section>
+  <section class="main-section" id="constants">
     <h2 id="constants">Constants</h2>
     <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter,
        underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.<br>
-       const PI = 3.14; <br>
+       <code>const PI = 3.14;</code> <br>
        A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.
 
        The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.
        
        You cannot declare a constant with the same name as a function or variable in the same scope. For example: <br>
-       // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS<br>
-            WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;<br>
-            //statements }<br>
+      <code> // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS</code><br>
+           <code> WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;</code><br>
+            <code>//statements }</code><br>
             However, object attributes are not protected, so the following statement is executed without problems. <br>
-            const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = <br>
-            "otherValue";
+            <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = </code><br>
+            <code>"otherValue";</code><br>
       </p>
-  <h2 id="data">Data types</h2>
+    </section>
+    <section class="main-section" id="Data_types">
+      <h2 id="data">Data types</h2>
   <p>The latest ECMAScript standard defines seven data types:<br>
 
     Six data types that are primitives:<br>
@@ -190,16 +209,13 @@ if (true) { let y = 5; } console.log(y); // ReferenceError: y is
       <li>Number. 42 or 3.14159.</li>
       <li>String. "Howdy"</li>
       <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
-        
-
-        
-        
-        
         </ul>
     and Object<br>
 
 Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform. </p>
-  
+</section>
+<section class="main-section" id="if_else_statement">
+
 <h2 id="if">if...else statement</h2>
 <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
   <br>if (condition) { statement_1; } else { statement_2; }<br>
@@ -219,7 +235,8 @@ Although these data types are a relatively small amount, they enable you to perf
   <br>if (x = y) { /* statements here */ }<br>
   If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:
   <br>if ((x = y)) { /* statements here */ }</p><br>
-
+</section>
+<section class="main-section" id="Function_declarations">
   <h2 id="function">Function declarations</h2>
   <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:<br>
 
@@ -237,12 +254,13 @@ return number * number;<br>
 
 Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the 
 value of the parameter, this change is not reflected globally or in the calling function. </p>
-
+</section>
+<section class="main-section" id="Reference">
 <h2 id="refernce">Reference</h2>
 <p>All the documentation in this page is taken from MDN</p>
 
-  
+</section>
 </div>
-   
+</main>
 </body>
 </html> 
