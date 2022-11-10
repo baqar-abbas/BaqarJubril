@@ -27,7 +27,15 @@
           </code>
   <li>Intro</li>
     <p>Microverse Application</p>
-    <p>Microverse Application</p>
+    <p>Microverse Application
+      JavaScript is the world's most popular programming language.
+
+JavaScript is the programming language of the Web.
+
+JavaScript is easy to learn.
+
+This tutorial will teach you JavaScript from basic to advanced.
+</p>
     <section class="main-section" id="Personal_info">
             <header>Personal info</header>
       <code
@@ -36,7 +44,17 @@
           </code>
      <li>P info</li>
       <p>Microverse Application</p>
-      <p>Microverse Application</p>
+      <p>Microverse Application
+      JavaScript is the world's most popular programming language.
+
+JavaScript is the programming language of the Web.
+
+JavaScript is easy to learn.
+
+This tutorial will teach you JavaScript from basic to advanced.
+
+
+</p>
       <section class="main-section" id="Job">
        <header>Job</header>
         <code
@@ -54,7 +72,17 @@
           </code>
    <li>P.y</li>
           <p>Microverse Application</p>
-          <p>Microverse Application</p>
+          <p>Microverse Application
+         JavaScript is the world's most popular programming language.
+
+JavaScript is the programming language of the Web.
+
+JavaScript is easy to learn.
+
+This tutorial will teach you JavaScript from basic to advanced.
+
+
+</p>
           <section class="main-section" id="Position">
             <header>Position</header>
             <code
@@ -63,7 +91,16 @@
           </code>
      <li>Pstn</li>
     <p>Microverse Application</p>
-    <p>Microverse Application</p>
+    <p>Microverse Application
+      JavaScript is the world's most popular programming language.
+
+JavaScript is the programming language of the Web.
+
+JavaScript is easy to learn.
+
+This tutorial will teach you JavaScript from basic to advanced.
+
+</p>
 <nav id="navbar">
   <header>Navbar</header>
   <a class="nav-link" href="#Introduction">Introduction</a>
